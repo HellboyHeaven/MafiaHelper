@@ -27,7 +27,7 @@ class GameDefaultService implements GameService {
     Colors.lightGreen,
     Colors.purple,
     Colors.white,
-    Colors.blue,
+    Colors.blue.shade900,
     Colors.orange,
   };
  /* Colors.lightGreen,

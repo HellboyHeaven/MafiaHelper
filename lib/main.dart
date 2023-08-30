@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'features/presentation/pages/home.dart';
 import 'injection_container.dart';
 
+
 void main() {
+
+
   initializeDependencies();
   runApp(const MyApp());
 }
@@ -12,7 +15,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Home();
+
+    return MaterialApp(
+      theme: ThemeData(primaryColor: Colors.deepOrangeAccent, canvasColor: Colors.lightBlueAccent),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+      },
+    );
   }
 
 }

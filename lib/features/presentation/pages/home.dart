@@ -1,9 +1,7 @@
-import 'dart:js';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mafia_helper/features/domain/entities/role.dart';
+import 'package:mafia_helper/features/domain/entities/roles/citizen.dart';
 import 'package:mafia_helper/features/domain/entities/roles/detective.dart';
 import 'package:mafia_helper/features/domain/entities/roles/doctor.dart';
 import 'package:mafia_helper/features/domain/entities/roles/killer.dart';
@@ -14,8 +12,6 @@ import 'package:mafia_helper/features/presentation/bloc/role_list_cubit.dart';
 import 'package:mafia_helper/features/presentation/widgets/cards/role_card.dart';
 import 'package:mafia_helper/features/presentation/widgets/table.dart';
 
-import '../../domain/entities/roles/citizen.dart';
-
 class Home extends StatelessWidget {
   Home({super.key});
 
@@ -23,9 +19,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.deepOrangeAccent, canvasColor: Colors.lightBlueAccent),
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(title: const Text('Mafia Helper'),centerTitle: true,),
         body:  SafeArea(
           child: BlocProvider(
@@ -33,8 +27,7 @@ class Home extends StatelessWidget {
             child: MafiaGameView(),
           )
         ),
-      ),
-    );
+      );
   }
 }
 

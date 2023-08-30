@@ -41,6 +41,7 @@ class _PlayerCardState extends State<PlayerCard> {
               decoration: BoxDecoration(
                 color: widget._color,
                 borderRadius: _borderRadius,
+                border: Border.all(color: Colors.black, width: 4),
               ),
             ),
           ),
